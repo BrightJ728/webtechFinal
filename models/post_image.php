@@ -7,7 +7,7 @@ class POST extends db_connection {
     
     
     public function upload_image($name, $image, $description,$price){
-        $sql = "INSERT INTO `images`(`name`,`image`,uploaded,`description`,price) VALUES ('$name','$image',NOW(),'$description',$price)";
+        $sql = "INSERT INTO `images`(`name`,`image`,`uploaded`,`description`,`price`) VALUES ('$name','$image',NOW(),'$description','$price')";
 
         return $this->db_query($sql);
     }

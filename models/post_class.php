@@ -3,15 +3,8 @@
 require_once (dirname(__FILE__)).'/../settings/db_class.php';
 
 class Post extends db_connection {
-    public function create($title, $body){
-        // sql query
-        $sql = "INSERT INTO `posts`(`title`, `body`) VALUES ('$title','$body')";
-
-        // run query
-        return $this->db_query($sql);
-    }
-
-    public function getPosts(){
+    
+    public function getFashions(){
         //sql query
         $sql = "SELECT * FROM `images`";
 
@@ -25,7 +18,7 @@ class Post extends db_connection {
         // run query
         return $this->db_query($sql);
     }
-    public function getSinglePost($id){
+    public function getSingleFashion($id){
         // sql query
         $sql = "SELECT * FROM `images` WHERE `id`='$id'";
 
@@ -33,9 +26,9 @@ class Post extends db_connection {
         return $this->db_query($sql);
     }
 
-    public function update($id, $title, $body){
+    public function update($id, $name, $body){
         // sql query
-        $sql = "UPDATE `images` SET `name`='$title',`description`='$body' WHERE `id`='$id'";
+        $sql = "UPDATE `images` SET `name`='$name',`description`='$body' WHERE `id`='$id'";
 
         // run query
         return $this->db_query($sql);

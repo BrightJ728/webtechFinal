@@ -2,7 +2,7 @@
 //connect to database class
 include_once (dirname(__FILE__)).'/../controllers/post-controller.php';
 
-$posts = getPosts();
+$posts = getFashions();
 ?>
 
 <!doctype html>

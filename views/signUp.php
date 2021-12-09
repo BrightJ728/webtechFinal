@@ -36,28 +36,28 @@ session_start();
             session_destroy();
         ?>
             <div class="form-control">
-                <label for="username">Username</label>
-                <input type="text" placeholder="Enter Username" id="username" name="username">
+                <label for="username">Full Name</label>
+                <input type="text" id="username" name="username">
                 <small id='usernameError'></small>
             </div>
             <div class="form-control">
                 <label for="email">Email</label>
-                <input type="text" placeholder="Enter Email" id="email" name="email">
+                <input type="text"  id="email" name="email">
                 <small id='emailError'></small>
             </div>
             <div class="form-control">
                 <label for="phone">Phone Number</label>
-                <input type="text" placeholder="phone number" id="phone" name="phone">
+                <input type="text"  id="phone" name="phone">
                 <small id='phone'></small>
             </div>
             <div class="form-control">
                 <label for="password">Password</label>
-                <input type="password" placeholder="Enter password" id="password" name="password">
+                <input type="password"  id="password" name="password">
                 <small id='passwordError'></small>
             </div>
             <div class="form-control">
                 <label for="password2">Confirm Password</label>
-                <input type="password" placeholder="Confirm Your Password" id="password2" name="password2">
+                <input type="password" id="password2" name="password2">
                 <small id='password2Error'></small>
             </div>
           

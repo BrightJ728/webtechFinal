@@ -2,31 +2,18 @@
 //connect to database class
 require_once (dirname(__FILE__)).'/../controllers/dressController.php';
 
-// keeping track of errors
 $errors = array();
 
-// check if button is clicked
 if(isset($_POST["submit"])){
     // grab form data
     $name = $_POST["name"];
     $description = $_POST["description"];
     $price = $_POST["price"];
 
-    // validate data
-
-    // check if fields are empty
     if(empty($name)){array_push($errors, "name is required");}
 
-    if(empty($description)){array_push($errors, "password is required");}
+    if(empty($description)){array_push($errors, "description is required");}
 
-    // check if fields are of appropriate length
-
-    // check if passwords are the same
-    
-    // validate email with regex
-    // set error if not an email
-    // number validation
-    // image validation
     $target_dir = "images/";
     $target_file = $target_dir.basename($_FILES["image"]["name"]);
     $image_file_type = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -68,7 +55,7 @@ if(isset($_POST["submit"])){
             $upload = image_upload($name, $target_file, $description, $price);
             // check if user is registered
             if(!$upload){
-                echo "failed";
+                    echo "failed";
             }else{
                 // redirect
                 echo "success";

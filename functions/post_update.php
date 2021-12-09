@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     $body = $_POST['body'];
 
     // update post if empty
-    $updatedPost = updatePost($id, $title, $body);
+    $updatedPost = updateFashion($id, $FashionName, $body);
     if($updatedPost){
         header("location: ../views/posts.php?id=".$id);
     }else{

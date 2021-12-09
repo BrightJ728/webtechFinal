@@ -1,11 +1,9 @@
 <?php
 //connect to database class
 require_once (dirname(__FILE__)).'/../controllers/UserController.php';
-
 // keeping track of errors
 $errors = array();
-
-// check if button is clicked
+// check if submit button is clicked
 if(isset($_POST["submit"])){
     // grab form data
     $username = $_POST["username"];
@@ -37,16 +35,14 @@ if(isset($_POST["submit"])){
   
     // if form is fine
     if(count($errors) == 0){
-        // upload image
-
+      
         // check if uploaded successfully and then add new user
         // note we are storing the path to the image in the database
-        
-            $register_user = register_new_user($username, $email, $password);
-
-            // check if user is registered
+         $register_user = register_new_user($username, $email, $password);
+           // check if user is registered
             if(!$register_user){
-                echo "failed";
+                    header("refresh:1; url=../views/signUp.php");
+                    echo "<script> alert('Welcome Email already exist check inputs')</script>";
             }else{
                 // redirect
                 echo "success";

@@ -62,7 +62,7 @@ if (!empty($_SESSION['mycart'])) {
          <td><b>Total Price</b></td>
          <td><b>$".number_format($total, 2)."</b></td>
          <td>
-            <a href='views/checkout.php'> <button class='btn btn-warning btn-block' >Checkout</button></a>
+            <a href='views/contactus.php'> <button class='btn btn-warning btn-block' >Checkout</button></a>
             </td>
            
             <td>

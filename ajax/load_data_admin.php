@@ -31,7 +31,7 @@ include('../models/image_queries.php');
 
 $output = "";
 if (mysqli_num_rows($res) < 1) {
-	$output .= "<h1 class='text-center'>Not yet Uploaded</h1>";
+	$output .= "<h1 style='margin:20%' class='text-center'>Start Uploading Your Fashions</h1>";
 }else{
 	while ($row = mysqli_fetch_array($res)) {
 		require('../views/admin_details.php');

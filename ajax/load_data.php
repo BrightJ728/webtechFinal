@@ -8,9 +8,8 @@ if (isset($_POST['page'])) {
 }else{
 	$page = 1;
 }
-
 $pagination = "";
-$limit = 15;
+$limit = 7;
 $start = ($page - 1)* $page;
 $pages = mysqli_query($connect,"SELECT count(id) AS id FROM images");
 while ($row = mysqli_fetch_array($pages)) {
@@ -31,7 +30,7 @@ include('../models/image_queries.php');
 
 $output = "";
 if (mysqli_num_rows($res) < 1) {
-	$output .= "<h1 class='text-center'>Not yet Uploaded</h1>";
+	$output .= "<h1 style='margin:20%'>Fashions Have Not Been Uploaded Yet</h1>";
 }else{
 	while ($row = mysqli_fetch_array($res)) {
 		require('../views/details.php');

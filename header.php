@@ -31,17 +31,14 @@
         <a class="nav-link text-white" href="views/crud.php">Edit Product</a>
       </li>
       </li>
-         <li class="nav-item">
-        <a class="nav-link text-white" href="views/messages.php">Read Messages</a>
-      </li>
+      
       <li class="nav-item">
-        <a class="nav-link text-white" href="views/logout.php">LogOut</a>
+        <a class="nav-link text-white" href="views/logOut.php">LogOut</a>
       </li>
     </ul>
 		
 	</nav>
 
-   <script src="scripts/script.js">
 
    </script>
 

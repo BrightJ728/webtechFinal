@@ -28,11 +28,15 @@
   <p> Fashion Designer 
       <br>Request and order for Your prefered Fashion from 
      </p>
+ <br>
+ <br>
  <a href="views/signUp.php">SignUp</a>
  <a href="views/login.php">LogIn</a>
 
 </div>
+
  </div>
+ 
  </div>
    <br>
    <div class=" fadeInDown">
@@ -40,7 +44,7 @@
  <div class="container">
 
  <div class="form">
-     <p> GUEST <br>Request and order for Your prefered Fashion from 
+     <p> GUEST <br>Request and order for Your prefered Fashion from Us
      <br>
      Skilled Designers</p>
      <a href="guest.php"> START ORDERING</a>

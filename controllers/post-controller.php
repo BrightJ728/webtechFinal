@@ -5,12 +5,12 @@ include_once (dirname(__FILE__)).'/../models/post_class.php';
 // Inserting a new post
 
 
-function getPosts(){
+function getFashions(){
     // Create new post object
     $post = new Post;
 
     // Run query
-    $runQuery = $post->getPosts();
+    $runQuery = $post->getFashions();
 
     if($runQuery){
         $posts = array();
@@ -22,12 +22,12 @@ function getPosts(){
         return false;
     }
 }
-function getSinglePost($id){
+function getSingleFashions($id){
     // Create new post object
     $post = new Post;
 
     // Run query
-    $runQuery = $post->getSinglePost($id);
+    $runQuery = $post->getSingleFashion($id);
 
     if($runQuery){
 
@@ -42,7 +42,7 @@ function getSinglePost($id){
         return false;
     }
 }
-function deletePost($id){
+function deleteFashion($id){
     // Create new post object
     $post = new Post;
 
@@ -57,12 +57,12 @@ function deletePost($id){
 }
 
 
-function updatePost($id, $title, $body){
+function updateFashion($id, $fashionName, $description){
     // Create new post object
     $post = new Post;
 
     // Run query
-    $runQuery = $post->update($id, $title, $body);
+    $runQuery = $post->update($id, $fashionName, $description);
 
     if($runQuery){
         return $runQuery;
